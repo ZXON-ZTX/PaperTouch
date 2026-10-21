@@ -1,0 +1,6 @@
+interface:
+  display_name: "PaperTouch"
+  short_description: "Whitelist-only cleanup for English academic manuscripts"
+  default_prompt: "Use $paper-touch-en to clean this English manuscript using only the explicit rules while preserving unmatched text, structure, claims, equations, and citations."
+policy:
+  allow_implicit_invocation: true

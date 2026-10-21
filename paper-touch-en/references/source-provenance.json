@@ -1,0 +1,28 @@
+{
+  "adaptation_date": "2026-10-20",
+  "skill": "paper-touch-en",
+  "source_skill": "lieflat-less-ai-tone",
+  "files": [
+    {
+      "source_file": "SKILL.md",
+      "source_kind": "user-provided local skill",
+      "sha256": "1db087d4db618cf635ec15b304803f3a219d57f92297e1103f922f2f051c8a35",
+      "included_as": "references/source-zh.md",
+      "usage": "source and license; research used only to identify Chinese-corpus scope"
+    },
+    {
+      "source_file": "LICENSE",
+      "source_kind": "user-provided local skill",
+      "sha256": "a8ed7518cad7a15c08f97de3b725864c3a1b1b2ad9bb3f3f5f0258ca93a676c7",
+      "included_as": "LICENSE",
+      "usage": "source and license; research used only to identify Chinese-corpus scope"
+    },
+    {
+      "source_file": "RESEARCH.en.md",
+      "source_kind": "user-provided local skill",
+      "sha256": "bfd1b000473789346b9dda9d0c2cc372f5bf2eb672022247eb3e84f02a7937bf",
+      "included_as": null,
+      "usage": "source and license; research used only to identify Chinese-corpus scope"
+    }
+  ]
+}
