@@ -1,10 +1,31 @@
 # PaperTouch
 
-**英文论文轻修：只改命中规则的片段，其余原样保留。**
+**英文论文轻修，新增计算机与网络安全专家润色模式。**
 
-PaperTouch 是用于英文论文成稿清理的 AI 编程助手技能。它采用六条明确的编辑白名单，在保留科学含义和文章结构的前提下，清理指定的冗余表达。适用于摘要、正文、方法、讨论、综述及审稿回复。
+PaperTouch 是用于已有英文论文的 AI 助手技能。默认采用六条明确的编辑白名单，只改命中片段，其余原样保留；v1.1.0 新增可选专家润色，面向计算机与网络安全论文改善表达、语法和局部衔接，同时保留科学含义、原有主张和用户指定的结构。
 
-English academic manuscript cleanup with an explicit six-rule whitelist, minimal span edits, and exact preservation of unmatched text and structure.
+English academic editing with an unchanged six-rule whitelist by default, plus opt-in CS/security expert editing informed by published papers.
+
+| 模式 | 如何启用 | 适用任务 |
+|---|---|---|
+| 白名单轻修 | 默认，或指定“原有白名单模式” | 只处理E1–E6，未命中文字逐字保留 |
+| 专家润色 | 明确指定“专家润色模式” | 在授权范围内改善表达、语法和局部衔接，保留攻击者能力、实验条件及结论强度 |
+
+两种模式都支持仅审核。专家模式不会自动重排章节或补写缺失研究内容；原有六条规则和补丁工具保持不变。
+
+## 可选专家润色
+
+```text
+使用 $paper-touch-en 的专家润色模式修改下面网络安全论文段落。
+改善表达和局部衔接，保留攻击者能力、实验条件、数字、引用、研究状态和结论强度。
+只输出修改后的段落。
+```
+
+学习记录覆盖100篇开放获取论文：60篇USENIX Security、20篇NDSS、10篇OSDI和10篇NSDI。26篇开发集论文的76处章节窗口经过研读，20篇论文留出用于冻结后的适用性检查。全文采集、自动分析与章节研读分别记录，不宣称逐页精读全部100篇，也不证明作者身份或检测效果。参见 [专家指南](paper-touch-en/references/expert-editing.md)、[证据与边界](paper-touch-en/references/style-evidence.md)和[语料清单](paper-touch-en/references/style-sources.json)。论文PDF与完整正文不随技能再分发。
+
+专家指南重点覆盖问题与机制、威胁模型与信任边界、评估比较，以及假设、观察、推断和证明的区分。风格蒸馏不涉及模型参数训练。
+
+[下载 v1.1.0 技能包](https://github.com/ZXON-ZTX/PaperTouch/releases/download/v1.1.0/paper-touch-en.zip) · [下载学习与验证材料](https://github.com/ZXON-ZTX/PaperTouch/releases/download/v1.1.0/PaperTouch-style-study.zip)
 
 ## 能做什么
 
@@ -73,11 +94,11 @@ python -B -m unittest discover -s tests -v
 
 输出必须是新文件。工具检查字面锚点、重叠、未改区域、部分受保护结构、数值及常见单位、否定/模态标记和常见引文；它不能判定规则是否真正适用或科学语义是否等价。列表和表格等已识别结构继续整行保护。识别不到的专业单位、引文和其他结构需要显式保护范围及人工复核。
 
-当前随包包含 **19 项自动测试**，覆盖原有补丁行为、六条规则示例和保护修复。完整格式与限制见 [patch-format.md](paper-touch-en/references/patch-format.md)，历史验证与本次修复记录见 [验证记录](paper-touch-en/验证记录.md)。
+当前随包包含 **19 项自动测试**，覆盖原有补丁行为、六条规则示例和保护修复。专家模式另记录了六组独立代理行为检查，包含研究状态、样本范围、保护片段、清楚段落不改以及白名单模式回归；这些有限案例不等于真人专家盲评。参见 [模式对照记录](paper-touch-en/references/expert-mode-validation.json)、[补丁格式与限制](paper-touch-en/references/patch-format.md)和[验证记录](paper-touch-en/验证记录.md)。
 
 ## 适用边界
 
-PaperTouch 用于已有英文成稿，不负责从零起草、中文改写、翻译、全面语法校对或重组论文。Word/PDF 需要相应文档工具及独立排版验证，不能直接输入上述补丁脚本。
+PaperTouch 用于已有英文成稿，不负责从零起草、中文改写、翻译或未经授权的结构重组。默认白名单模式不执行全面语法校对；专家模式允许授权范围内的语法和表达调整。Word/PDF 需要相应文档工具及独立排版验证，不能直接输入上述补丁脚本。
 
 六条规则是编辑白名单，不是作者身份或 AI 检测模型。没有英文大规模实证或检测器降分保证；中文来源中的语料频率不作为英文效果证据。AI 助手实际运行所需的账号和服务由使用者所在环境提供。
 

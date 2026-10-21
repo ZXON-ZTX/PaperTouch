@@ -1,9 +1,19 @@
 ---
 name: paper-touch-en
-description: Clean completed English academic manuscripts using an explicit editing whitelist, with minimal span changes and exact preservation of unmatched text and structure. Use for post-draft papers, abstracts, methods, discussions, reviews and rebuttals; not for drafting from scratch, general proofreading, restructuring or detector-score guarantees. 英文论文成稿白名单清理，未命中原样保留。
+description: Edit existing English academic prose. Default to the unchanged E1–E6 whitelist with exact preservation of unmatched text; on explicit request, use optional expert editing informed by systems, network security, software security, privacy and AI-security papers. Preserve scientific content and scope; no drafting, translation or detector-score guarantees. 英文成稿白名单清理；可显式选择计算机与安全专家润色模式。
 ---
 
 # PaperTouch
+
+## Choose the mode first
+
+- **Whitelist (default):** use the original procedure below. Unqualified PaperTouch cleanup requests do not activate broader editing. The six E1–E6 rules and patch helper remain unchanged.
+- **Expert editing (explicit opt-in):** when the user asks for expert mode or CS/security expert-style polishing, read and follow [expert-editing.md](references/expert-editing.md) instead of the whitelist-only procedure below. This permits expression/grammar/local-cohesion edits in the authorized existing prose, with scientific content and scope preserved. S1–S10 are editorial guidance for this mode, not additions to E1–E6. Do not run broader edits through the whitelist patch helper.
+- **Audit-only:** report located issues without rewriting, under whichever mode the user selected. If no mode was selected, use whitelist scope.
+
+The opt-in guide draws on an open-access corpus whose sources, section-read coverage and limitations are documented in [style-evidence.md](references/style-evidence.md). It does not imitate a particular author or establish human authorship. Existing author/venue preferences and the user's scope remain controlling; do not fabricate facts or change claim strength in either mode.
+
+## Original whitelist procedure
 
 Apply only the six rules in [English whitelist](references/english-rules.md). This is a post-draft editor, not a general rewrite pass. The original Chinese project supplies the whitelist/minimum-change method; its Chinese corpus frequencies do not establish English detection performance. See [source and adaptation](references/source-notes.md).
 

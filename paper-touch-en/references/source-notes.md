@@ -17,3 +17,7 @@ Unlike a broad academic-polishing skill, this version does not automatically rep
 ## Verification boundary
 
 The patch helper checks some mechanical invariants. Model-based synthetic editing cases check rule use and exceptions. Neither proves scientific validity, complete format support, human authorship, a lower AI-detection rate or a similarity percentage. No commercial detector, external service or large English corpus evaluation is part of this version.
+
+## Optional expert mode (2026-10-21)
+
+The original six-rule whitelist and patch helper are unchanged. A separately selected expert-editing mode uses an open-access CS/security corpus to inform expression choices, as documented in [style-evidence.md](style-evidence.md) and [style-sources.json](style-sources.json). Corpus acquisition/phrase analysis, selected section reading and held-out applicability checks are not a human/AI authorship experiment or a detector evaluation. Paper PDFs and full extracted text are not redistributed; original paper copyrights remain with their respective holders. The earlier verification boundary above describes the whitelist version; the added study's actual scope is stated in its own record.

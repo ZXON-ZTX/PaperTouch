@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-21",
+  "method": "Independent agent executions; maintainer proposition review and mechanical protected-span checks; one execution per case, not a blind human preference test.",
+  "case_count": 6,
+  "improved_expression_case_ids": [
+    "network-condition",
+    "research-status",
+    "measurement-scope",
+    "mixed-protected"
+  ],
+  "clear_text_preserved": true,
+  "whitelist_output_identical_to_baseline": true,
+  "numbers_citations_and_explicit_protected_spans_verified": true,
+  "semantic_review": "Capabilities, negation, conditions, sampling scope, research state and uncertainty manually compared; no change found in these fixtures.",
+  "cases": [
+    {
+      "id": "network-condition",
+      "request": "Use PaperTouch in expert editing mode for a systems/network security paper. Improve expression within this paragraph; keep all facts, conditions, numbers and claim strength. Return only the edited paragraph.",
+      "input": "The thing that the attacker needs is the ability to observe traffic on the gateway. The attacker cannot decrypt payloads. For the condition where two clients share an address, our classifier may associate the wrong client with a flow. We measured this behavior on 12 gateways; we did not evaluate other deployments.",
+      "baseline_output": "The thing that the attacker needs is the ability to observe traffic on the gateway. The attacker cannot decrypt payloads. For the condition where two clients share an address, our classifier may associate the wrong client with a flow. We measured this behavior on 12 gateways; we did not evaluate other deployments.",
+      "updated_output": "The attacker needs the ability to observe traffic on the gateway. The attacker cannot decrypt payloads. When two clients share an address, our classifier may associate the wrong client with a flow. We measured this behavior on 12 gateways; we did not evaluate other deployments.",
+      "scope_handling": "Explicit expert mode; simplified cumbersome capability and condition wording within the paragraph. Preserved the attacker restriction, shared-address condition, may hedge, 12-gateway measurement scope and unevaluated deployments."
+    },
+    {
+      "id": "research-status",
+      "request": "Use PaperTouch expert editing mode to improve this existing paragraph, without changing research status or adding evidence. Return only the edited paragraph.",
+      "input": "A comparison on the production network is what we plan to do next. At present, we have only evaluated the prototype in a laboratory setting. This makes the method a potentially useful component, although its behavior under deployment load remains unknown.",
+      "baseline_output": "A comparison on the production network is what we plan to do next. At present, we have only evaluated the prototype in a laboratory setting. This makes the method a potentially useful component, although its behavior under deployment load remains unknown.",
+      "updated_output": "We plan to conduct a comparison on the production network next. At present, we have only evaluated the prototype in a laboratory setting. This makes the method a potentially useful component, although its behavior under deployment load remains unknown.",
+      "scope_handling": "Explicit expert mode; clarified the planned action in the first sentence. Preserved planned production comparison, completed laboratory-only evaluation, prototype status, potential usefulness and unknown behavior under deployment load."
+    },
+    {
+      "id": "measurement-scope",
+      "request": "Use PaperTouch expert editing mode for a security measurement paragraph. Improve clarity while preserving all numbers, comparisons, findings, limits and citation positions. Return only the edited paragraph.",
+      "input": "In the 40 endpoints that we tested, there were 6 endpoints that accepted the malformed response [7]. The six observations are not an estimate of prevalence across the Internet. A valid response was accepted by all 40 endpoints. We cannot say from this experiment whether the problem occurs in other implementations.",
+      "baseline_output": "In the 40 endpoints that we tested, there were 6 endpoints that accepted the malformed response [7]. The six observations are not an estimate of prevalence across the Internet. A valid response was accepted by all 40 endpoints. We cannot say from this experiment whether the problem occurs in other implementations.",
+      "updated_output": "Of the 40 endpoints we tested, 6 accepted the malformed response [7]. The six observations are not an estimate of prevalence across the Internet. A valid response was accepted by all 40 endpoints. This experiment does not establish whether the problem occurs in other implementations.",
+      "scope_handling": "Explicit expert mode; removed an existential construction and clarified the final inference limit. Preserved all numeric expressions, malformed-versus-valid findings, Internet-prevalence exclusion and unknown generalizability. Citation [7] remains attached to the same finding at the end of the first sentence."
+    },
+    {
+      "id": "fluent-noop",
+      "request": "Use PaperTouch expert editing mode. Make no change if this paragraph is already clear. Return only the final paragraph.",
+      "input": "We assume that the hypervisor is trusted and that the attacker controls an unprivileged process. The attacker may invoke system calls but cannot modify kernel memory directly. We exclude physical attacks.",
+      "baseline_output": "We assume that the hypervisor is trusted and that the attacker controls an unprivileged process. The attacker may invoke system calls but cannot modify kernel memory directly. We exclude physical attacks.",
+      "updated_output": "We assume that the hypervisor is trusted and that the attacker controls an unprivileged process. The attacker may invoke system calls but cannot modify kernel memory directly. We exclude physical attacks.",
+      "scope_handling": "Explicit expert mode with a no-change instruction for clear prose; returned the input unchanged."
+    },
+    {
+      "id": "whitelist-regression",
+      "request": "Use PaperTouch's original whitelist mode, not expert editing. Return only the final paragraph and preserve every unmatched region exactly.",
+      "input": "We conducted an evaluation of the encoder on the test split. The thing that the attacker needs is the ability to observe traffic on the gateway. The delay was approximately about 5 ms, and the model cannot yet handle packet loss.",
+      "baseline_output": "We evaluated the encoder on the test split. The thing that the attacker needs is the ability to observe traffic on the gateway. The delay was approximately 5 ms, and the model cannot yet handle packet loss.",
+      "updated_output": "We evaluated the encoder on the test split. The thing that the attacker needs is the ability to observe traffic on the gateway. The delay was approximately 5 ms, and the model cannot yet handle packet loss.",
+      "scope_handling": "Original whitelist mode only; applied E3 to 'conducted an evaluation of' and E5 to 'approximately about'. Preserved every unmatched span exactly, including the cumbersome attacker sentence and the packet-loss limitation."
+    },
+    {
+      "id": "mixed-protected",
+      "request": "Use PaperTouch expert editing mode only on English prose. Preserve the Chinese text, quotation, code, units and citation exactly. Return only the final paragraph.",
+      "input": "The observation we made was that the delay remained 5 ms [12]. 原始实验条件不变。The operator's note was 'we cannot change the gateway'. The identifier `cannot_retry` names the original implementation.",
+      "baseline_output": "The observation we made was that the delay remained 5 ms [12]. 原始实验条件不变。The operator's note was 'we cannot change the gateway'. The identifier `cannot_retry` names the original implementation.",
+      "updated_output": "We observed that the delay remained 5 ms [12]. 原始实验条件不变。The operator's note was 'we cannot change the gateway'. The identifier `cannot_retry` names the original implementation.",
+      "scope_handling": "Explicit expert mode on English prose only; clarified the first sentence's observation construction. Preserved the Chinese text, exact quotation, code identifier, 5 ms unit expression and citation [12], including their order and surrounding sentence structure."
+    }
+  ]
+}
