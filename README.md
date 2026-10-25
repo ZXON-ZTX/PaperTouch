@@ -1,6 +1,6 @@
 # PaperTouch
 
-**英文论文轻修，新增计算机与网络安全专家润色模式。**
+**英文论文轻修与专家润色：只为具体问题修改，核对充分后交付。**
 
 PaperTouch 是用于已有英文论文的 AI 助手技能。默认采用六条明确的编辑白名单，只改命中片段，其余原样保留；v1.1.0 新增可选专家润色，面向计算机与网络安全论文改善表达、语法和局部衔接，同时保留科学含义、原有主张和用户指定的结构。
 
@@ -12,6 +12,18 @@ English academic editing with an unchanged six-rule whitelist by default, plus o
 | 专家润色 | 明确指定“专家润色模式” | 在授权范围内改善表达、语法和局部衔接，保留攻击者能力、实验条件及结论强度 |
 
 两种模式都支持仅审核。专家模式不会自动重排章节或补写缺失研究内容；原有六条规则和补丁工具保持不变。
+
+## v1.1.1：让编辑更克制
+
+本次将 Stop That Shit 的核心工作原则适配到论文编辑，两种模式共同遵循：
+
+- 完整交付指定任务，不用计划或少量示例替代所需修改稿。
+- 只为具体问题和必要依赖增加工作，不顺手扩大润色、报告或审核范围。
+- 保留数据、引用和科学含义等有效保护；必要检查受阻时处理具体原因。
+- 复用仍适用于最终文本的核对结果，验收充分后停止无依据的反复改写。
+- 按要求交付成稿，避免把内部流程和未请求的预防性文字写入论文；保留科学局限、不确定性及必要披露。
+
+这是行为指导，不包含 Guard/Hook 强制拦截。默认 E1–E6、专家模式权限和补丁工具均未改变；[改编来源与MIT许可](paper-touch-en/references/source-notes.md#focused-editing-principles-2026-10-25)随包保留。
 
 ## 可选专家润色
 
@@ -25,7 +37,9 @@ English academic editing with an unchanged six-rule whitelist by default, plus o
 
 专家指南重点覆盖问题与机制、威胁模型与信任边界、评估比较，以及假设、观察、推断和证明的区分。风格蒸馏不涉及模型参数训练。
 
-[下载 v1.1.0 技能包](https://github.com/ZXON-ZTX/PaperTouch/releases/download/v1.1.0/paper-touch-en.zip) · [下载学习与验证材料](https://github.com/ZXON-ZTX/PaperTouch/releases/download/v1.1.0/PaperTouch-style-study.zip)
+[下载 v1.1.1 技能包](https://github.com/ZXON-ZTX/PaperTouch/releases/download/v1.1.1/paper-touch-en.zip) · [下载学习与验证材料](https://github.com/ZXON-ZTX/PaperTouch/releases/download/v1.1.1/PaperTouch-style-study.zip)
+
+学习与验证材料沿用v1.1.0的研究记录；本次更新没有重新采集论文或增加专家模式行为评测。
 
 ## 能做什么
 

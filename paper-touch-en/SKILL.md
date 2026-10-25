@@ -13,6 +13,18 @@ description: Edit existing English academic prose. Default to the unchanged E1â€
 
 The opt-in guide draws on an open-access corpus whose sources, section-read coverage and limitations are documented in [style-evidence.md](references/style-evidence.md). It does not imitate a particular author or establish human authorship. Existing author/venue preferences and the user's scope remain controlling; do not fabricate facts or change claim strength in either mode.
 
+## Keep the edit focused (both modes)
+
+Adapt the Stop That Shit working principles to manuscript editing:
+
+1. Complete the requested deliverable within the selected mode and confirmed scope. An editing request needs the authorized revision, not only a plan or an easier sample; audit-only requests remain findings-only.
+2. Use a direct edit for a located problem. Expand work only to resolve a concrete in-scope dependency; optional polishing, extra reports, services or review rounds need an actual task purpose. These principles add no E-rules or expert-mode permissions.
+3. Keep effective protection of scientific content and document integrity. Inspect an unclear protection before changing it. If a required check blocks legitimate work, address its specific cause; do not weaken safeguards or substitute an unrelated passing check.
+4. Check the requested result and affected guarantees, reusing evidence valid for the final text. Finish when the deliverable meets its scope and required checks and no known in-scope blocker remains. Another rewrite or audit needs a new finding or requirement.
+5. Follow the requested output format. Keep internal process notes and unrequested precautionary prose out of the manuscript. Retain original scientific limitations, uncertainty and required disclosures; explain a material unresolved limitation at the relevant decision point.
+
+These are advisory working principles, not an additional checklist, review stage or runtime Guard. Adaptation and license: [source notes](references/source-notes.md#focused-editing-principles-2026-10-25).
+
 ## Original whitelist procedure
 
 Apply only the six rules in [English whitelist](references/english-rules.md). This is a post-draft editor, not a general rewrite pass. The original Chinese project supplies the whitelist/minimum-change method; its Chinese corpus frequencies do not establish English detection performance. See [source and adaptation](references/source-notes.md).

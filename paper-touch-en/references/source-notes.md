@@ -21,3 +21,9 @@ The patch helper checks some mechanical invariants. Model-based synthetic editin
 ## Optional expert mode (2026-10-21)
 
 The original six-rule whitelist and patch helper are unchanged. A separately selected expert-editing mode uses an open-access CS/security corpus to inform expression choices, as documented in [style-evidence.md](style-evidence.md) and [style-sources.json](style-sources.json). Corpus acquisition/phrase analysis, selected section reading and held-out applicability checks are not a human/AI authorship experiment or a detector evaluation. Paper PDFs and full extracted text are not redistributed; original paper copyrights remain with their respective holders. The earlier verification boundary above describes the whitelist version; the added study's actual scope is stated in its own record.
+
+## Focused editing principles (2026-10-25)
+
+The shared working principles in the entrypoint adapt the user-supplied local Stop That Shit skill: complete the authorized responsibility, start directly, expand only for a concrete need, preserve effective protection, and finish after sufficient verification. Source project: [lennney/stop-that-shit](https://github.com/lennney/stop-that-shit). Copyright (c) 2026 Stop That Shit contributors; the [MIT notice](stop-that-shit-LICENSE.txt) is retained.
+
+The adaptation concerns manuscript-editing decisions and concise delivery. It does not copy Guard invocation syntax, delegation budgets, hooks, host enforcement or runtime blocking. The default E1–E6 whitelist, opt-in expert-mode authority, scientific-content protections and patch applicator are unchanged. These instructions are advisory and do not guarantee model behavior.
