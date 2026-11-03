@@ -1,0 +1,102 @@
+{
+  "date": "2026-11-03",
+  "source_reading_record": {
+    "author": "Hardik Pandya",
+    "source": "User-invoked local Stop Slop skill",
+    "files_read": [
+      {
+        "local_source_file": "SKILL.md",
+        "sha256": "7432a1d9ebdd42b27666da8458af252edf549f723fb14bcd4791425103930310"
+      },
+      {
+        "local_source_file": "references/phrases.md",
+        "sha256": "4ca1b7e97123b5c67eff3dc97e5e977332e0b24021265c1553888a93ec33fa93"
+      },
+      {
+        "local_source_file": "references/structures.md",
+        "sha256": "ffbf1316c7fb5aaf552de005609a64a9639b546ecd76bfb0e482864d5bbe6f58"
+      },
+      {
+        "local_source_file": "references/examples.md",
+        "sha256": "49c592899eb4457f95d0767e15e3143569e2cef50f2927c3174e62432984cd3d"
+      },
+      {
+        "local_source_file": "LICENSE",
+        "sha256": "2e2b2beaf41cc0ce28485455a62aed81777cdcdf68702e142427aef1cd720f2c"
+      }
+    ]
+  },
+  "case_count": 9,
+  "execution": "One independent-agent execution per invented fixture; source/result comparison and maintainer review, not a human preference or detector study.",
+  "outcome": {
+    "framing_removal_preserves_assertions": true,
+    "six_noops_exact": true,
+    "whitelist_E3_E5_only": true,
+    "audit_only_no_replacement_paragraph": true
+  },
+  "cases": [
+    {
+      "id": "empty-framing",
+      "instruction": "Use PaperTouch expert mode to remove empty rhetorical framing from this existing paragraph. Preserve every assertion, condition, number and research status. Return only the edited paragraph.",
+      "input": "Here's the thing: the checker rejects unsigned messages before parsing. Let that sink in. We evaluated the checker on 12 gateways; deployments with packet loss remain untested.",
+      "output": "The checker rejects unsigned messages before parsing. We evaluated the checker on 12 gateways; deployments with packet loss remain untested.",
+      "scope_handling": "Explicit expert mode permits removal of the empty opening and dramatic standalone framing. Preserved rejection of unsigned messages, the before-parsing order, completed evaluation on 12 gateways and the untested packet-loss deployment boundary. No capability or evidence was added."
+    },
+    {
+      "id": "technical-adverbs-passive",
+      "instruction": "Use PaperTouch expert mode. Preserve this paragraph if it is already clear; do not invent an actor. Return only the final paragraph.",
+      "input": "Samples were randomly assigned to three groups. Each sample was measured twice. The estimate is approximately 0.8 and may change under load.",
+      "output": "Samples were randomly assigned to three groups. Each sample was measured twice. The estimate is approximately 0.8 and may change under load.",
+      "scope_handling": "Returned the clear paragraph unchanged. Random assignment, the appropriate methods passives, three groups, twice-per-sample measurement, approximation and load-dependent uncertainty all carry meaning; no human actor was invented."
+    },
+    {
+      "id": "mathematical-condition",
+      "instruction": "Use PaperTouch expert mode. Keep the mathematical condition, limiting regime and convergence guarantee unchanged. Preserve the paragraph if clear. Return only the final paragraph.",
+      "input": "When λ > 0, the iteration converges almost surely. The asymptotic bound holds only if n tends to infinity.",
+      "output": "When λ > 0, the iteration converges almost surely. The asymptotic bound holds only if n tends to infinity.",
+      "scope_handling": "Returned the clear paragraph unchanged. Preserved the strict λ > 0 condition, almost-sure convergence guarantee and necessary asymptotic condition. Neither When nor almost surely is an editing trigger."
+    },
+    {
+      "id": "real-contrast",
+      "instruction": "Use PaperTouch expert mode without losing exclusions or conditions. Preserve the paragraph if clear. Return only the final paragraph.",
+      "input": "The attack reveals metadata, not plaintext. It does not recover encryption keys. With authentication enabled, the verifier rejects the modified message.",
+      "output": "The attack reveals metadata, not plaintext. It does not recover encryption keys. With authentication enabled, the verifier rejects the modified message.",
+      "scope_handling": "Returned the clear paragraph unchanged. Preserved the metadata-versus-plaintext distinction, key-recovery exclusion, authentication-enabled condition and legitimate verifier action."
+    },
+    {
+      "id": "author-punctuation-list",
+      "instruction": "Use PaperTouch expert mode. The author's supplied style guide intentionally uses this em dash; preserve it, all technical metrics and the citation. Keep this clear sentence unchanged. Return only the final sentence.",
+      "input": "We report precision, recall, and F1-score—each computed on the same held-out split [4].",
+      "output": "We report precision, recall, and F1-score—each computed on the same held-out split [4].",
+      "scope_handling": "Returned the sentence unchanged as explicitly requested. Preserved the author-required em dash, technical three-item metric list, hyphenation, shared held-out split and citation [4]."
+    },
+    {
+      "id": "legitimate-system-agent",
+      "instruction": "Use PaperTouch expert mode without inventing human agency. Keep this paragraph unchanged if clear. Return only the final paragraph.",
+      "input": "The solver minimizes the objective. The optimizer updates the weights after each batch.",
+      "output": "The solver minimizes the objective. The optimizer updates the weights after each batch.",
+      "scope_handling": "Returned the clear paragraph unchanged. Solver and optimizer are legitimate technical subjects; preserved their actions and the after-each-batch timing without inventing human agency."
+    },
+    {
+      "id": "missing-specifics",
+      "instruction": "Use PaperTouch expert mode. No additional study context or measurements are available. Preserve the author's claims, evaluation and uncertainty; do not invent details or omit claims. Return only the final paragraph.",
+      "input": "The implications are significant. The approach may be useful in other settings.",
+      "output": "The implications are significant. The approach may be useful in other settings.",
+      "scope_handling": "Returned the paragraph unchanged. The implications and other settings cannot be specified from the supplied context. Preserved the author's significance judgment, possible usefulness and broad setting reference rather than deleting claims or inventing particulars. The edited-paragraph-only format leaves no room for an outside-the-manuscript query."
+    },
+    {
+      "id": "whitelist-regression",
+      "instruction": "Use PaperTouch's original E1–E6 whitelist mode only. Preserve every unmatched character exactly, even empty framing outside those six rules. Return only the final paragraph.",
+      "input": "Here's the thing: we conducted an evaluation of the encoder on the test split. The measured delay was approximately about 5 ms. Let that sink in.",
+      "output": "Here's the thing: we evaluated the encoder on the test split. The measured delay was approximately 5 ms. Let that sink in.",
+      "scope_handling": "Original whitelist mode only. Applied E3 to conducted an evaluation of and E5 to approximately about. Preserved every unmatched character, including both rhetorical framing expressions, the test-split scope, measured status, 5 ms and the remaining approximation."
+    },
+    {
+      "id": "audit-only",
+      "instruction": "Use PaperTouch expert mode to audit this paragraph only. Identify located rhetorical problems and explain their effect, but do not supply a rewritten paragraph or modify the source. Any suggestion must preserve the study boundary.",
+      "input": "Here's the thing: we measured 5 ms on the laboratory testbed. Let that sink in. We have not evaluated production traffic.",
+      "output": "- S10 / empty framing, sentence 1: 'Here's the thing:' announces the measurement without adding an assertion, attribution or logical relation. It delays the substantive statement.\n- S10 / dramatic framing, sentence 2: 'Let that sink in.' adds emphasis without supplying scientific information. It interrupts the progression from the laboratory measurement to the evaluation limit.\n\nThese framing spans can be removed within expert mode. Any edit must retain the measured 5 ms, its laboratory-testbed scope and the statement that production traffic has not been evaluated. The final sentence is a substantive limitation and should remain.",
+      "scope_handling": "Audit-only under explicit expert mode. Located two rhetorical problems and explained their effects using S10 and the academic adaptation's framing guidance. Supplied no replacement paragraph, made no source edits and expressly preserved the laboratory-versus-production study boundary."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-25",
+  "case_count": 8,
+  "method": "Separate baseline and updated agent executions; source/output protected-token checks and maintainer proposition review; one execution per fixture.",
+  "baseline_had_no_observed_failure": true,
+  "identical_outputs": 7,
+  "scientific_preservation_review": "No change found in these fixtures to assumptions, scope, uncertainty, notation, units, inference or research status.",
+  "limitation": "Not a measured language-quality gain, human preference test or scientific-validity guarantee.",
+  "cases": [
+    {
+      "id": "mechanics",
+      "request": "Use PaperTouch expert mode for a mechanics paragraph. Improve cumbersome expression only; preserve assumptions, scope, numbers and claim strength. Return only the paragraph.",
+      "input": "The calculation that we carried out was for an isotropic plate under plane strain. Small strains are what the model assumes. For strains below 0.5%, the predicted displacement agreed with the measurements to within 3%. We have not tested finite-strain loading.",
+      "baseline_output": "We carried out the calculation for an isotropic plate under plane strain. The model assumes small strains. For strains below 0.5%, the predicted displacement agreed with the measurements to within 3%. We have not tested finite-strain loading.",
+      "updated_output": "We carried out the calculation for an isotropic plate under plane strain. The model assumes small strains. For strains below 0.5%, the predicted displacement agreed with the measurements to within 3%. We have not tested finite-strain loading.",
+      "scope_handling": "Explicit expert mode with the mechanics profile. Simplified the first two sentences; retained isotropy, plane strain, small-strain assumption, strict below-0.5% scope, within-3% agreement, predicted-versus-measured distinction and untested finite-strain loading. The final two sentences remain unchanged."
+    },
+    {
+      "id": "communications",
+      "request": "Use PaperTouch expert mode for a communications-theory paragraph. Improve expression; retain every mathematical condition and the finite-length limitation. Return only the paragraph.",
+      "input": "The rate condition that is required is $R < I(W)$. Under a binary-input memoryless channel model, the theorem establishes the asymptotic bound as $N \\to \\infty$. A claim about performance at finite block length is not what we make here.",
+      "baseline_output": "The required rate condition is $R < I(W)$. Under a binary-input memoryless channel model, the theorem establishes the asymptotic bound as $N \\to \\infty$. We make no claim about performance at finite block length.",
+      "updated_output": "The required rate condition is $R < I(W)$. Under a binary-input memoryless channel model, the theorem establishes the asymptotic bound as $N \\to \\infty$. We make no claim here about performance at finite block length.",
+      "scope_handling": "Explicit expert mode with the communications profile. Simplified cumbersome first and last sentences; preserved the exact mathematical spans, strict inequality, binary-input memoryless premise, theorem status, asymptotic regime and finite-block-length exclusion. The middle sentence remains unchanged."
+    },
+    {
+      "id": "biomedical",
+      "request": "Use PaperTouch expert mode for a biomedical methods/results paragraph. Improve expression without altering the experimental unit, observations, statistics or translational scope. Return only the paragraph.",
+      "input": "The cultures that we used came from 3 donors, with 4 technical wells per donor. The value that we report is the donor-level mean. The observed reduction was not statistically significant. These in vitro results do not establish clinical efficacy.",
+      "baseline_output": "The cultures we used came from 3 donors, with 4 technical wells per donor. We report the donor-level mean. The observed reduction was not statistically significant. These in vitro results do not establish clinical efficacy.",
+      "updated_output": "The cultures we used came from 3 donors, with 4 technical wells per donor. We report the donor-level mean. The observed reduction was not statistically significant. These in vitro results do not establish clinical efficacy.",
+      "scope_handling": "Explicit expert mode with the biomedical profile. Simplified relative-clause wording and the reporting construction. Preserved 3 donors, 4 technical wells per donor, donor-level aggregation, observed non-significance and the in vitro-to-clinical inference boundary. The final two sentences remain unchanged."
+    },
+    {
+      "id": "chemistry",
+      "request": "Use PaperTouch expert mode for an existing chemistry paragraph. Improve expression while preserving compounds, conditions, yield type, purity and mechanistic certainty. Return only the paragraph.",
+      "input": "The reaction that we performed used catalyst A in ethanol at 25 °C for 18 h. The isolated yield that we obtained was 78%; this is not a measurement of purity. The observations are consistent with the proposed pathway, but they do not establish the intermediate's identity.",
+      "baseline_output": "We performed the reaction using catalyst A in ethanol at 25 °C for 18 h. We obtained an isolated yield of 78%; this is not a measurement of purity. The observations are consistent with the proposed pathway, but they do not establish the intermediate's identity.",
+      "updated_output": "We performed the reaction using catalyst A in ethanol at 25 °C for 18 h. We obtained an isolated yield of 78%; this is not a measurement of purity. The observations are consistent with the proposed pathway, but they do not establish the intermediate's identity.",
+      "scope_handling": "Explicit expert mode with the chemistry profile. Simplified action and yield-reporting constructions. Preserved catalyst A, ethanol, 25 °C, 18 h, isolated yield of 78%, the yield-versus-purity distinction and the distinction between pathway consistency and established intermediate identity. The mechanistic interpretation sentence remains unchanged."
+    },
+    {
+      "id": "physics",
+      "request": "Use PaperTouch expert mode for a physics paragraph. Improve expression while preserving notation, uncertainty labels and interpretation. Return only the paragraph.",
+      "input": "The mass value that we measured was $m = 10.2 \\pm 0.3\\,(stat) \\pm 0.5\\,(syst)$ GeV. The local significance was 5.1σ, whereas the global significance was 4.5σ. Compatibility with the model is what this observation indicates; it is not proof that the model is unique.",
+      "baseline_output": "We measured a mass of $m = 10.2 \\pm 0.3\\,(stat) \\pm 0.5\\,(syst)$ GeV. The local significance was 5.1σ, whereas the global significance was 4.5σ. This observation indicates compatibility with the model; it is not proof that the model is unique.",
+      "updated_output": "We measured a mass of $m = 10.2 \\pm 0.3\\,(stat) \\pm 0.5\\,(syst)$ GeV. The local significance was 5.1σ, whereas the global significance was 4.5σ. This observation indicates compatibility with the model; it is not proof that the model is unique.",
+      "scope_handling": "Explicit expert mode with the physics profile. Simplified the measurement and interpretation constructions. Preserved the exact mass expression, statistical and systematic uncertainty labels, GeV unit, local 5.1σ versus global 4.5σ distinction and compatibility-versus-uniqueness inference boundary. The significance sentence remains unchanged."
+    },
+    {
+      "id": "environment",
+      "request": "Use PaperTouch expert mode for a model-based environmental engineering paragraph. Improve expression but preserve model assumptions, predicted-vs-observed status and the stated limitation. Return only the paragraph.",
+      "input": "The simulation that we ran held relative humidity fixed. Under this assumption, doubling CO2 produced a modeled temperature change of 1.8 °C. This value is an equilibrium model response, not an observed regional forecast. Cloud feedback was not included.",
+      "baseline_output": "We ran the simulation with relative humidity held fixed. Under this assumption, doubling CO2 produced a modeled temperature change of 1.8 °C. This value is an equilibrium model response, not an observed regional forecast. Cloud feedback was not included.",
+      "updated_output": "We ran the simulation with relative humidity held fixed. Under this assumption, doubling CO2 produced a modeled temperature change of 1.8 °C. This value is an equilibrium model response, not an observed regional forecast. Cloud feedback was not included.",
+      "scope_handling": "Explicit expert mode with the environmental-model profile. Simplified only the opening sentence. Preserved fixed relative humidity, doubling CO2, modeled 1.8 °C change, equilibrium-response status, exclusion of observed regional forecasting and omitted cloud feedback. The final three sentences remain unchanged."
+    },
+    {
+      "id": "fluent-control",
+      "request": "Use PaperTouch expert mode. Preserve this clear paragraph if no expression problem needs repair. Return only the final paragraph.",
+      "input": "We assume linear elasticity and small strains. The derivation applies to an isotropic material under plane strain. Finite-strain behavior is outside the model's scope.",
+      "baseline_output": "We assume linear elasticity and small strains. The derivation applies to an isotropic material under plane strain. Finite-strain behavior is outside the model's scope.",
+      "updated_output": "We assume linear elasticity and small strains. The derivation applies to an isotropic material under plane strain. Finite-strain behavior is outside the model's scope.",
+      "scope_handling": "Explicit expert mode with the mechanics profile. No demonstrable expression problem; returned the complete input unchanged, preserving every assumption and scope restriction."
+    },
+    {
+      "id": "whitelist-control",
+      "request": "Use PaperTouch's original whitelist mode only. Preserve unmatched text exactly. Return only the paragraph.",
+      "input": "We conducted an evaluation of the encoder. The mass value that we measured was 5 mg. The temperature was approximately about 25 °C, and the reaction may remain incomplete.",
+      "baseline_output": "We evaluated the encoder. The mass value that we measured was 5 mg. The temperature was approximately 25 °C, and the reaction may remain incomplete.",
+      "updated_output": "We evaluated the encoder. The mass value that we measured was 5 mg. The temperature was approximately 25 °C, and the reaction may remain incomplete.",
+      "scope_handling": "Original whitelist mode only. Applied E3 to 'conducted an evaluation of' and E5 to 'approximately about'. Preserved every unmatched character, including the cumbersome mass sentence, 5 mg, the remaining approximation and possible incomplete reaction."
+    }
+  ]
+}

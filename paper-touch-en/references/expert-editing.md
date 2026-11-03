@@ -1,8 +1,12 @@
-# Optional expert editing for computer science and security
+# Optional expert editing for academic English
 
-Load this only when the user explicitly requests PaperTouch's expert mode, CS/security expert-style editing, or the equivalent in Chinese. It edits existing English prose. The original whitelist mode remains the default and its E1–E6 rules remain unchanged.
+Load this only when the user explicitly requests PaperTouch's expert mode, domain-aware expert-style editing, or the equivalent in Chinese. It edits existing English prose. The original whitelist mode remains the default and its E1–E6 rules remain unchanged.
+
+For computer science/security, use the source-backed guidance below. For mechanics/control, communications, biomedical work, chemistry/materials, physics or civil/energy/environmental models, also read the relevant profile in [crossfield-expert.md](crossfield-expert.md). Choose from the actual paragraph's discipline and rhetorical task; the profiles are limited case-based references, not universal field norms. Do not impose a security threat model or a software evaluation outline on other kinds of research.
 
 The aim is precise, field-appropriate expression of the author's existing work. This is a source-grounded editorial guide, not parameter training, a single author's voice, a human-authorship classifier, or a detector-score optimization procedure.
+
+For empty framing, formulaic rhetorical packaging, vague referents or promotional jargon, use the [academic Stop Slop adaptation](stop-slop-academic.md) within this same expert edit. Its conditional actions preserve scientific qualifications, legitimate passive/system subjects, true contrasts and author preferences; it introduces no blanket bans or extra scoring/rewrite cycle.
 
 ## Scope and working procedure
 
@@ -20,7 +24,7 @@ These are conditional editorial choices in expert mode, not new E-rules. Evidenc
 |---|---|---|
 | S1 | Put an already stated research object and its technical obstacle where the reader can identify them. Replace a vague referent with its existing antecedent when unambiguous. | No invented gap, motivation, deployment context or novelty claim. Never force every introduction to use the same opening. |
 | S2 | Give actions to the appropriate actor: authors evaluate, an implementation checks, an attacker controls. Active `we` and passive constructions are both available. | Actor, agency, tense and completion state. Do not replace an implementation with a proposed method, or an assumption with a measured result. |
-| S3 | Express threat assumptions using the existing adversary's access, knowledge, control, goal and exclusions. Keep the distinction between on-path/off-path, privileged/unprivileged, trusted/untrusted and pre-/post-authentication. | Every capability restriction, trust boundary, attacker goal and out-of-scope case. Do not fill a missing threat model from a standard attack scenario. |
+| S3 | For text that actually contains an adversary model, express threat assumptions using the existing adversary's access, knowledge, control, goal and exclusions. Keep the distinction between on-path/off-path, privileged/unprivileged, trusted/untrusted and pre-/post-authentication. | Every capability restriction, trust boundary, attacker goal and out-of-scope case. Do not fill a missing threat model from a standard attack scenario. |
 | S4 | Connect an already stated design decision to the constraint or invariant it addresses. Prefer the actual operation to an empty assertion of sophistication. | Mechanism, ordering, proof obligation, conditions and tradeoff. Do not turn a functional description into a correctness or security guarantee. |
 | S5 | In evaluation prose, clarify the question being answered and the relationship between target, baseline, workload and metric using information already supplied. | Versions, hardware, seeds, repeated runs, aggregation, denominators and comparison conditions. A testbed, simulation and production deployment must remain distinct. |
 | S6 | Keep observation, interpretation and formal proof separate. State an observed result with its sample/condition; preserve the author's calibration of any explanation or generalization. | `may`, `suggests`, `we observed`, non-significance and other original certainty markers in meaning. Do not mechanically weaken valid theorems or strengthen empirical evidence. |

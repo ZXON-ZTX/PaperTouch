@@ -27,3 +27,15 @@ The original six-rule whitelist and patch helper are unchanged. A separately sel
 The shared working principles in the entrypoint adapt the user-supplied local Stop That Shit skill: complete the authorized responsibility, start directly, expand only for a concrete need, preserve effective protection, and finish after sufficient verification. Source project: [lennney/stop-that-shit](https://github.com/lennney/stop-that-shit). Copyright (c) 2026 Stop That Shit contributors; the [MIT notice](stop-that-shit-LICENSE.txt) is retained.
 
 The adaptation concerns manuscript-editing decisions and concise delivery. It does not copy Guard invocation syntax, delegation budgets, hooks, host enforcement or runtime blocking. The default E1–E6 whitelist, opt-in expert-mode authority, scientific-content protections and patch applicator are unchanged. These instructions are advisory and do not guarantee model behavior.
+
+## Cross-disciplinary references (2026-10-25)
+
+The user-supplied classic engineering bibliography is used as a discovery aid, not as instructions or proof that its links, impact claims or prose were verified. The extension records 142 entries, retrieves DOI registration metadata where available, distinguishes accessed full text from scanned pages, excerpts and unavailable candidates, and provides narrowly evidenced field profiles in [crossfield-expert.md](crossfield-expert.md). Source versions, actual reading locations and limitations are in [crossfield-sources.json](crossfield-sources.json).
+
+Only paraphrased observations and bibliographic/provenance metadata are distributed. The supplied collection, source PDFs, full article text and page images are not republished or relicensed under the skill's MIT license. Historical wording and translated reports are not contemporary journal norms. The original whitelist and patch helper are unchanged; expert mode retains its original editing authority rather than gaining scientific-review or content-invention permissions.
+
+## Stop Slop academic adaptation (2026-11-03)
+
+Adapted from the user-supplied local Stop Slop skill by [Hardik Pandya](https://hvpandya.com), including its phrases, structures and before/after examples. Copyright (c) 2025 Hardik Pandya; the complete [MIT notice](stop-slop-LICENSE.txt) is retained. PaperTouch integrates conditional handling of empty framing, rhetorical packaging, jargon, vague referents and unclear agency in [stop-slop-academic.md](stop-slop-academic.md).
+
+The source's categorical bans on adverbs, passive voice, non-human subjects, contrast, Wh-openers, lists and em dashes are not adopted as academic rules. Neither second-person narration nor the 35/50 scoring threshold is imposed. No source example authorizes losing an original claim, hedge, qualifier, method or comparison. Default E1–E6, existing expert authority, the focused-editing principles and the patch helper remain unchanged.

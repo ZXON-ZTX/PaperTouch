@@ -1,21 +1,30 @@
 # PaperTouch
 
-**英文论文轻修与专家润色：只为具体问题修改，核对充分后交付。**
+**跨学科英文论文专家润色，克制清理空泛与模板化表达。**
 
-PaperTouch 是用于已有英文论文的 AI 助手技能。默认采用六条明确的编辑白名单，只改命中片段，其余原样保留；v1.1.0 新增可选专家润色，面向计算机与网络安全论文改善表达、语法和局部衔接，同时保留科学含义、原有主张和用户指定的结构。
+PaperTouch 是用于已有英文论文的 AI 助手技能。默认采用六条明确的编辑白名单，只改命中片段，其余原样保留。v1.2.0 将跨学科案例参考与 Stop Slop 学术适配合并到可选专家模式，改善表达、语法和局部衔接，同时保留科学含义、原有主张和用户指定的结构。
 
-English academic editing with an unchanged six-rule whitelist by default, plus opt-in CS/security expert editing informed by published papers.
+English academic editing with an unchanged six-rule whitelist by default, plus opt-in cross-disciplinary expert editing and an academic adaptation of Stop Slop.
 
 | 模式 | 如何启用 | 适用任务 |
 |---|---|---|
 | 白名单轻修 | 默认，或指定“原有白名单模式” | 只处理E1–E6，未命中文字逐字保留 |
-| 专家润色 | 明确指定“专家润色模式” | 在授权范围内改善表达、语法和局部衔接，保留攻击者能力、实验条件及结论强度 |
+| 专家润色 | 明确指定“专家润色模式” | 在授权范围内改善表达、语法和局部衔接，保留学科假设、实验条件及结论强度 |
 
 两种模式都支持仅审核。专家模式不会自动重排章节或补写缺失研究内容；原有六条规则和补丁工具保持不变。
 
-## v1.1.1：让编辑更克制
+## v1.2.0：跨学科参考与 Stop Slop 学术适配
 
-本次将 Stop That Shit 的核心工作原则适配到论文编辑，两种模式共同遵循：
+- **按领域选用参考：**在原有计算机/安全指导之外，补充机械/控制、通信、生物医学、化学/材料、物理及工程模型的表达与保护重点。
+- **清理有依据的表达问题：**处理无信息量铺垫、模板化修辞、重复强调、含糊指代和遮蔽实际功能的宣传术语。
+- **保留必要学术表达：**不全面禁用副词、被动语态、系统主体、真实对比、技术列表或破折号，不虚构具体信息，不强加风格分数和反复重写门槛。
+- **保持原有边界：**默认E1–E6和补丁工具不变，专家模式仍须明确选择，不增加补造结果或科研主张修正权限。
+
+来源、适配例外与许可见[跨学科参考](paper-touch-en/references/crossfield-expert.md)、[Stop Slop学术适配](paper-touch-en/references/stop-slop-academic.md)及[来源说明](paper-touch-en/references/source-notes.md)。
+
+## 两种模式共同遵循克制编辑原则
+
+沿用v1.1.1中从 Stop That Shit 适配的工作原则：
 
 - 完整交付指定任务，不用计划或少量示例替代所需修改稿。
 - 只为具体问题和必要依赖增加工作，不顺手扩大润色、报告或审核范围。
@@ -27,9 +36,14 @@ English academic editing with an unchanged six-rule whitelist by default, plus o
 
 ## 可选专家润色
 
+跨学科扩展提供机械/控制、通信、生物医学、化学/材料、物理及工程模型的[分领域案例参考](paper-touch-en/references/crossfield-expert.md)。题录入口为用户提供的142个经典条目；实际取得15篇可提取全文，另核对一篇扫描论文的两页及一篇公开正文转录的片段，阅读/获取状态分别记录，不将全部链接称为已全文学习。参见[补充来源与阅读定位](paper-touch-en/references/crossfield-sources.json)。这些是有限案例参考，不是完整领域语料、模型训练或统一写作规范。
+
+专家模式还提供 [Stop Slop学术适配](paper-touch-en/references/stop-slop-academic.md)：清理无信息量铺垫、模板化修辞、重复强调与含糊指代，同时保留统计限定、有效被动语态、系统主体、真实对比和作者标点习惯。它不使用词语全面禁令或主观分数来强迫反复改写，默认白名单范围不变。
+
 ```text
-使用 $paper-touch-en 的专家润色模式修改下面网络安全论文段落。
-改善表达和局部衔接，保留攻击者能力、实验条件、数字、引用、研究状态和结论强度。
+使用 $paper-touch-en 的专家润色模式修改下面英文论文段落。
+按段落所属学科改善表达和局部衔接，清理空泛包装。
+保留模型假设、实验条件、数字、公式、引用、研究状态和结论强度。
 只输出修改后的段落。
 ```
 
@@ -37,9 +51,9 @@ English academic editing with an unchanged six-rule whitelist by default, plus o
 
 专家指南重点覆盖问题与机制、威胁模型与信任边界、评估比较，以及假设、观察、推断和证明的区分。风格蒸馏不涉及模型参数训练。
 
-[下载 v1.1.1 技能包](https://github.com/ZXON-ZTX/PaperTouch/releases/download/v1.1.1/paper-touch-en.zip) · [下载学习与验证材料](https://github.com/ZXON-ZTX/PaperTouch/releases/download/v1.1.1/PaperTouch-style-study.zip)
+[下载 v1.2.0 技能包](https://github.com/ZXON-ZTX/PaperTouch/releases/download/v1.2.0/paper-touch-en.zip) · [跨学科学习材料](https://github.com/ZXON-ZTX/PaperTouch/releases/download/v1.2.0/PaperTouch-crossfield-study.zip) · [原CS/安全学习材料](https://github.com/ZXON-ZTX/PaperTouch/releases/download/v1.2.0/PaperTouch-style-study.zip)
 
-学习与验证材料沿用v1.1.0的研究记录；本次更新没有重新采集论文或增加专家模式行为评测。
+下载资料保留各次研究和检查的原始日期。跨学科材料来自本次合并的领域扩展；CS/安全学习材料沿用v1.1.0的记录。Stop Slop适配的九组行为检查直接随技能包提供，没有重新采集论文或把这些检查视为真人质量盲评。
 
 ## 能做什么
 
@@ -109,6 +123,8 @@ python -B -m unittest discover -s tests -v
 输出必须是新文件。工具检查字面锚点、重叠、未改区域、部分受保护结构、数值及常见单位、否定/模态标记和常见引文；它不能判定规则是否真正适用或科学语义是否等价。列表和表格等已识别结构继续整行保护。识别不到的专业单位、引文和其他结构需要显式保护范围及人工复核。
 
 当前随包包含 **19 项自动测试**，覆盖原有补丁行为、六条规则示例和保护修复。专家模式另记录了六组独立代理行为检查，包含研究状态、样本范围、保护片段、清楚段落不改以及白名单模式回归；这些有限案例不等于真人专家盲评。参见 [模式对照记录](paper-touch-en/references/expert-mode-validation.json)、[补丁格式与限制](paper-touch-en/references/patch-format.md)和[验证记录](paper-touch-en/验证记录.md)。
+
+本版还附有[八组跨学科边界检查](paper-touch-en/references/crossfield-validation.json)和[九组Stop Slop适配检查](paper-touch-en/references/stop-slop-validation.json)，分别检查条件/符号保留、应保留文字不改、默认白名单回归和仅审核行为。它们是此前已完成的有限案例记录，不能用于量化写作质量或AI检测分数的提升。
 
 ## 适用边界
 
