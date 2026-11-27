@@ -16,6 +16,14 @@ Read enough adjacent context to resolve references. Extract the existing actor/a
 
 After editing, compare each proposition with the source, including its negation and scope. A planned evaluation must remain planned; a potentially useful component must not become one that has been implemented. Missing evidence may be flagged outside the manuscript when the requested output allows it, but is not permission to erase an author's claim or insert support. Return the requested edited passage; provide reasons or a comparison only when asked. Audit-only requests do not produce a replacement manuscript. Do not add citations to the style-learning papers to a user's manuscript.
 
+## Using the author's research context
+
+For a local edit, first identify which text the author wants returned. A supplied caption, table, definition or adjoining section can establish a referent, comparison group or measurement term. Use it to clarify the target only when the link is unambiguous. Leave the supporting passage in place. For example, if Methods explicitly defines *settling time* as the interval to steady state, an awkward reference to that same interval in Results can use the author's term. Keep a definition already needed by the intended reader.
+
+When polishing a results sentence, keep the statistic attached to the measurement it describes. In a discussion sentence, keep a proposed explanation attached to whoever proposes it. For instance, “Earlier work attributes the delay to buffering [4]. We observed the same delay.” can be tightened locally only if [4] still supports the earlier explanation and the authors still claim just the observation.
+
+If supplied passages disagree on a material detail, leave the disputed wording intact and complete the independent edits. In an expert audit, identify both locations, explain what decision the difference affects, and ask for the smallest piece of evidence that would settle it. An abstract giving a *median* of 14 ms and Results giving a *mean* of 14 ms for the same reported statistic require the calculation or the author's confirmation. Matching numbers alone cannot determine the statistic. In edited-text-only output, preserve the ambiguity in place. When notes are requested, put the question outside the manuscript.
+
 ## Editorial principles and their limits
 
 These are conditional editorial choices in expert mode, not new E-rules. Evidence locations and sampling limits are in [style-evidence.md](style-evidence.md); bibliographic records are in [style-sources.json](style-sources.json).

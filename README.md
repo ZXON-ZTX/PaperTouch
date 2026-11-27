@@ -1,139 +1,60 @@
 # PaperTouch
 
-**跨学科英文论文专家润色，克制清理空泛与模板化表达。**
+PaperTouch 帮你润色已有英文论文，也能按大学英语四级、六级的不同档位写作文。输入 `$paper-touch-en` 后选择文章类型；如果已经写明题目、考试和档位，就可以直接开始。
 
-PaperTouch 是用于已有英文论文的 AI 助手技能。默认采用六条明确的编辑白名单，只改命中片段，其余原样保留。v1.2.0 将跨学科案例参考与 Stop Slop 学术适配合并到可选专家模式，改善表达、语法和局部衔接，同时保留科学含义、原有主张和用户指定的结构。
+**[下载 v1.3.0 安装包](https://github.com/ZXON-ZTX/PaperTouch/releases/download/v1.3.0/paper-touch-en.zip)** · [更新说明](https://github.com/ZXON-ZTX/PaperTouch/releases/tag/v1.3.0) · [35 秒宣传片（MP4）](https://github.com/ZXON-ZTX/PaperTouch/releases/download/v1.3.0/PaperTouch-3D.mp4)
 
-English academic editing with an unchanged six-rule whitelist by default, plus opt-in cross-disciplinary expert editing and an academic adaptation of Stop Slop.
+[![PaperTouch 宣传片封面，点击观看或下载](assets/papertouch-cover.jpg)](https://github.com/ZXON-ZTX/PaperTouch/releases/download/v1.3.0/PaperTouch-3D.mp4)
 
-| 模式 | 如何启用 | 适用任务 |
-|---|---|---|
-| 白名单轻修 | 默认，或指定“原有白名单模式” | 只处理E1–E6，未命中文字逐字保留 |
-| 专家润色 | 明确指定“专家润色模式” | 在授权范围内改善表达、语法和局部衔接，保留学科假设、实验条件及结论强度 |
+## v1.3.0 有什么新功能
 
-两种模式都支持仅审核。专家模式不会自动重排章节或补写缺失研究内容；原有六条规则和补丁工具保持不变。
+| 文章类型 | 可选方式 | 实际用途 |
+| --- | --- | --- |
+| ① 英文论文 | 白名单轻修（默认）、专家润色，也可仅审核 | 轻修只处理六条规则命中的文字。专家模式可参考作者提供的图注、术语定义和相邻段落，改善指定段落的表达与衔接。 |
+| ② 英语四级作文 | 及格档、高分档 | 及格档用常见词和具体事例讲清理由。高分档可用对比或条件进一步展开理由。 |
+| ③ 英语六级作文 | 及格档、高分档 | 及格档解释例子如何支持观点。高分档进一步说明观点何时成立，也可回应反方理由。 |
 
-## v1.2.0：跨学科参考与 Stop Slop 学术适配
-
-- **按领域选用参考：**在原有计算机/安全指导之外，补充机械/控制、通信、生物医学、化学/材料、物理及工程模型的表达与保护重点。
-- **清理有依据的表达问题：**处理无信息量铺垫、模板化修辞、重复强调、含糊指代和遮蔽实际功能的宣传术语。
-- **保留必要学术表达：**不全面禁用副词、被动语态、系统主体、真实对比、技术列表或破折号，不虚构具体信息，不强加风格分数和反复重写门槛。
-- **保持原有边界：**默认E1–E6和补丁工具不变，专家模式仍须明确选择，不增加补造结果或科研主张修正权限。
-
-来源、适配例外与许可见[跨学科参考](paper-touch-en/references/crossfield-expert.md)、[Stop Slop学术适配](paper-touch-en/references/stop-slop-academic.md)及[来源说明](paper-touch-en/references/source-notes.md)。
-
-## 两种模式共同遵循克制编辑原则
-
-沿用v1.1.1中从 Stop That Shit 适配的工作原则：
-
-- 完整交付指定任务，不用计划或少量示例替代所需修改稿。
-- 只为具体问题和必要依赖增加工作，不顺手扩大润色、报告或审核范围。
-- 保留数据、引用和科学含义等有效保护；必要检查受阻时处理具体原因。
-- 复用仍适用于最终文本的核对结果，验收充分后停止无依据的反复改写。
-- 按要求交付成稿，避免把内部流程和未请求的预防性文字写入论文；保留科学局限、不确定性及必要披露。
-
-这是行为指导，不包含 Guard/Hook 强制拦截。默认 E1–E6、专家模式权限和补丁工具均未改变；[改编来源与MIT许可](paper-touch-en/references/source-notes.md#focused-editing-principles-2026-10-25)随包保留。
-
-## 可选专家润色
-
-跨学科扩展提供机械/控制、通信、生物医学、化学/材料、物理及工程模型的[分领域案例参考](paper-touch-en/references/crossfield-expert.md)。题录入口为用户提供的142个经典条目；实际取得15篇可提取全文，另核对一篇扫描论文的两页及一篇公开正文转录的片段，阅读/获取状态分别记录，不将全部链接称为已全文学习。参见[补充来源与阅读定位](paper-touch-en/references/crossfield-sources.json)。这些是有限案例参考，不是完整领域语料、模型训练或统一写作规范。
-
-专家模式还提供 [Stop Slop学术适配](paper-touch-en/references/stop-slop-academic.md)：清理无信息量铺垫、模板化修辞、重复强调与含糊指代，同时保留统计限定、有效被动语态、系统主体、真实对比和作者标点习惯。它不使用词语全面禁令或主观分数来强迫反复改写，默认白名单范围不变。
-
-```text
-使用 $paper-touch-en 的专家润色模式修改下面英文论文段落。
-按段落所属学科改善表达和局部衔接，清理空泛包装。
-保留模型假设、实验条件、数字、公式、引用、研究状态和结论强度。
-只输出修改后的段落。
-```
-
-学习记录覆盖100篇开放获取论文：60篇USENIX Security、20篇NDSS、10篇OSDI和10篇NSDI。26篇开发集论文的76处章节窗口经过研读，20篇论文留出用于冻结后的适用性检查。全文采集、自动分析与章节研读分别记录，不宣称逐页精读全部100篇，也不证明作者身份或检测效果。参见 [专家指南](paper-touch-en/references/expert-editing.md)、[证据与边界](paper-touch-en/references/style-evidence.md)和[语料清单](paper-touch-en/references/style-sources.json)。论文PDF与完整正文不随技能再分发。
-
-专家指南重点覆盖问题与机制、威胁模型与信任边界、评估比较，以及假设、观察、推断和证明的区分。风格蒸馏不涉及模型参数训练。
-
-[下载 v1.2.0 技能包](https://github.com/ZXON-ZTX/PaperTouch/releases/download/v1.2.0/paper-touch-en.zip) · [跨学科学习材料](https://github.com/ZXON-ZTX/PaperTouch/releases/download/v1.2.0/PaperTouch-crossfield-study.zip) · [原CS/安全学习材料](https://github.com/ZXON-ZTX/PaperTouch/releases/download/v1.2.0/PaperTouch-style-study.zip)
-
-下载资料保留各次研究和检查的原始日期。跨学科材料来自本次合并的领域扩展；CS/安全学习材料沿用v1.1.0的记录。Stop Slop适配的九组行为检查直接随技能包提供，没有重新采集论文或把这些检查视为真人质量盲评。
-
-## 能做什么
-
-| 规则 | 允许处理的问题 |
-|---|---|
-| E1 | 不承担必要强调或警示作用的空泛提示语 |
-| E2 | 两组明确列出的冗长功能短语 |
-| E3 | 三组研究动作中可等价简化的轻动词结构 |
-| E4 | 同一位置紧邻叠加的添加连接词 |
-| E5 | 同一数值前重复的近似词 |
-| E6 | 功能已完整说明、且不承载独立信息的装饰性职业拟人 |
-
-每次修改必须满足对应规则的触发条件和例外要求。不确定时保留原文；不为增加修改量而改写。完整规则见 [English whitelist](paper-touch-en/references/english-rules.md)。
-
-例如，以下只是编辑示例，不是研究结果：
-
-```text
-Before: We conducted an evaluation of the encoder on the test split.
-After:  We evaluated the encoder on the test split.
-```
-
-数字、单位、公式、术语、引用、限定条件、阴性结果和研究完成状态属于保护内容。正常被动语态、必要长句、真实对比及专业术语重复都不作为改写理由。
+选了四级或六级但还缺档位、题目时，PaperTouch 会一起询问缺少的信息，同一篇作文可以接着写。档位用于定位练习难度。各档对同一题目的处理方式见[四档写作指南](paper-touch-en/references/cet-essays.md)。
 
 ## 安装
 
-适用于支持本地 `SKILL.md` 技能的 AI 助手。以 Codex 为例：
+1. 下载 [paper-touch-en.zip](https://github.com/ZXON-ZTX/PaperTouch/releases/download/v1.3.0/paper-touch-en.zip) 并解压。
+2. 将整个 `paper-touch-en` 文件夹放进助手的技能目录。以 Windows 上的 Codex 为例，安装后的入口是 `%USERPROFILE%\.agents\skills\paper-touch-en\SKILL.md`。
+3. 在 Codex 中输入 `$paper-touch-en`。如果菜单尚未出现，重新打开 Codex 后再试。
 
-1. 下载 [paper-touch-en.zip](https://github.com/ZXON-ZTX/PaperTouch/releases/latest/download/paper-touch-en.zip)。
-2. 解压后，将整个 `paper-touch-en` 文件夹放入技能目录，例如 Windows 的 `%USERPROFILE%\.agents\skills\`。
-3. 确认路径为 `%USERPROFILE%\.agents\skills\paper-touch-en\SKILL.md`。如果尚未出现在技能列表中，重启 Codex 后再试。
-
-也可以克隆本仓库，将其中的 `paper-touch-en` 文件夹复制到技能目录。调用标识为 `$paper-touch-en`，展示名称为 PaperTouch。
-
-## 使用
-
-清理已有英文原稿：
+## 试一试
 
 ```text
-使用 $paper-touch-en 清理下面英文论文段落。
-只按白名单修改，保留未命中文字、数字、公式、引用和原有结构。
-只输出修改后的全文。
-
-[粘贴英文原稿]
+$paper-touch-en 四级高分档。以校园志愿服务为题写 130–160 词，只给英文正文。
 ```
-
-仅审核，不修改：
 
 ```text
-使用 $paper-touch-en，仅审核、不改写。
-列出命中的 E1–E6、原文位置及最小修改建议。
-
-[粘贴英文原稿]
+$paper-touch-en 六级作文，及格档和高分档各写一篇。题目是“大学生应如何使用学习软件？”
+两篇都写 160–180 词，再用中文解释论证的区别。
 ```
-
-作者样本或风格指南可以随任务提供。默认只输出完整修改稿；没有明确命中时原样返回。
-
-## 补丁工具与测试
-
-技能附带 Python 3.10+ 补丁工具，用于将已审阅的编辑计划应用到 UTF-8 文本、Markdown 和 LaTeX。无第三方 Python 依赖，工具本身不调用 API、检测器或网络服务。
 
 ```text
-cd paper-touch-en
-python scripts/apply_edits.py draft.md --plan edits.json -o draft.cleaned.md
-python -B -m unittest discover -s tests -v
+$paper-touch-en 使用论文专家模式。请参考下方方法段的指标定义，只润色摘要。
+保留数字、引用和结论强度，只输出改后的摘要。
+[粘贴英文摘要和方法段]
 ```
 
-输出必须是新文件。工具检查字面锚点、重叠、未改区域、部分受保护结构、数值及常见单位、否定/模态标记和常见引文；它不能判定规则是否真正适用或科学语义是否等价。列表和表格等已识别结构继续整行保护。识别不到的专业单位、引文和其他结构需要显式保护范围及人工复核。
+若摘要与结果对同一个 **14 ms** 分别使用 *median* 和 *mean*，可以要求专家模式“仅审核”。PaperTouch 会定位这两处表述，说明差异，并请作者核实计算口径。[科研上下文润色指南](paper-touch-en/references/expert-editing.md#using-the-authors-research-context)
 
-当前随包包含 **19 项自动测试**，覆盖原有补丁行为、六条规则示例和保护修复。专家模式另记录了六组独立代理行为检查，包含研究状态、样本范围、保护片段、清楚段落不改以及白名单模式回归；这些有限案例不等于真人专家盲评。参见 [模式对照记录](paper-touch-en/references/expert-mode-validation.json)、[补丁格式与限制](paper-touch-en/references/patch-format.md)和[验证记录](paper-touch-en/验证记录.md)。
+## 论文轻修和专家润色
 
-本版还附有[八组跨学科边界检查](paper-touch-en/references/crossfield-validation.json)和[九组Stop Slop适配检查](paper-touch-en/references/stop-slop-validation.json)，分别检查条件/符号保留、应保留文字不改、默认白名单回归和仅审核行为。它们是此前已完成的有限案例记录，不能用于量化写作质量或AI检测分数的提升。
+默认轻修遵循 E1–E6，保留未命中部分的原文和结构。例如 `We conducted an evaluation of the encoder.` 可以轻修为 `We evaluated the encoder.`。六条规则的适用条件和例外见[白名单](paper-touch-en/references/english-rules.md)。
 
-## 适用边界
+明确指定专家模式后，可在授权的英文段落内调整语法、措辞和局部衔接。编辑时保留数字、单位、公式、引用与原主张的关系，以及实验条件、研究状态和不确定性。模式内置计算机与网络安全指导，以及机械与控制、通信、生物医学、化学与材料、物理、工程模型等领域的案例参考。查阅[分领域指南](paper-touch-en/references/crossfield-expert.md)和 [Stop Slop 学术适配](paper-touch-en/references/stop-slop-academic.md)。
 
-PaperTouch 用于已有英文成稿，不负责从零起草、中文改写、翻译或未经授权的结构重组。默认白名单模式不执行全面语法校对；专家模式允许授权范围内的语法和表达调整。Word/PDF 需要相应文档工具及独立排版验证，不能直接输入上述补丁脚本。
+## 学习资料与验证
 
-六条规则是编辑白名单，不是作者身份或 AI 检测模型。没有英文大规模实证或检测器降分保证；中文来源中的语料频率不作为英文效果证据。AI 助手实际运行所需的账号和服务由使用者所在环境提供。
+- [计算机与安全研究资料 ZIP](https://github.com/ZXON-ZTX/PaperTouch/releases/download/v1.3.0/PaperTouch-style-study.zip) 记录了 100 篇开放获取论文的样本来源、选段阅读和留出检查。详见[语料与阅读范围](paper-touch-en/references/style-evidence.md)。
+- [跨学科研究资料 ZIP](https://github.com/ZXON-ZTX/PaperTouch/releases/download/v1.3.0/PaperTouch-crossfield-study.zip) 记录了 142 条选文线索、实际取得的材料和查阅位置。详见[来源记录](paper-touch-en/references/crossfield-sources.json)。两份资料均可按需单独下载。
+- 技能包附带 19 项自动测试，覆盖六条白名单和补丁保护。进入 `paper-touch-en` 目录后可运行 `python -B -m unittest discover -s tests`。论文专家模式的行为检查另见[验证记录](paper-touch-en/验证记录.md)。
+
+补丁工具适用于 UTF-8 文本、Markdown 和 LaTeX 的白名单修改。工具会核对锚点、数字和受保护片段，将结果写入新文件。[补丁格式与限制](paper-touch-en/references/patch-format.md) · [完整使用说明](paper-touch-en/使用说明.md)
 
 ## 来源与许可
 
-本英文版本改编自用户提供的 `lieflat-less-ai-tone` 中文技能，保留白名单、最小改动和信息守恒方法；英文规则独立列明。原始 Copyright (c) 2026 shiujan 和 [MIT 许可证](LICENSE) 保留。
-
-完整来源说明、中文原始快照及文件哈希随仓库提供：[source-notes.md](paper-touch-en/references/source-notes.md)、[source-zh.md](paper-touch-en/references/source-zh.md)、[source-provenance.json](paper-touch-en/references/source-provenance.json)。
+PaperTouch 的白名单方法源自 `lieflat-less-ai-tone`（Copyright © 2026 shiujan）。四、六级练习档位参考了 [Talorcat 的 English Writing Coach](https://github.com/Talorcat/English-writing-master)，PaperTouch 的四档指南与示例为本项目编写。论文编辑中采用的 Stop That Shit 和 Stop Slop 原则及许可均列在[来源说明](paper-touch-en/references/source-notes.md)。[MIT 许可证](LICENSE)

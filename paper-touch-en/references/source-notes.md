@@ -39,3 +39,11 @@ Only paraphrased observations and bibliographic/provenance metadata are distribu
 Adapted from the user-supplied local Stop Slop skill by [Hardik Pandya](https://hvpandya.com), including its phrases, structures and before/after examples. Copyright (c) 2025 Hardik Pandya; the complete [MIT notice](stop-slop-LICENSE.txt) is retained. PaperTouch integrates conditional handling of empty framing, rhetorical packaging, jargon, vague referents and unclear agency in [stop-slop-academic.md](stop-slop-academic.md).
 
 The source's categorical bans on adverbs, passive voice, non-human subjects, contrast, Wh-openers, lists and em dashes are not adopted as academic rules. Neither second-person narration nor the 35/50 scoring threshold is imposed. No source example authorizes losing an original claim, hedge, qualifier, method or comparison. Default E1–E6, existing expert authority, the focused-editing principles and the patch helper remain unchanged.
+
+## Research context in expert editing (local extension, 2026-11-27)
+
+The research-editing guidance in the locally expanded English Writing Coach informed the context and audit examples in [expert-editing.md](expert-editing.md#using-the-authors-research-context). The local extension added the academic guide to the student-writing skill distributed by [Talorcat](https://github.com/Talorcat/English-writing-master). PaperTouch's examples were written for editing existing manuscripts and can be used directly from this package.
+
+## CET writing profiles
+
+The four practice profiles are based on the level distinctions in [English Writing Coach](https://github.com/Talorcat/English-writing-master), distributed in the upstream archive as `english-writing-coach`. PaperTouch supplies its own instructions and teaching examples in [the CET guide](cet-essays.md).

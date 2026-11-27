@@ -1,11 +1,22 @@
 ---
 name: paper-touch-en
-description: Edit existing English academic prose. Default to the unchanged E1–E6 whitelist with exact preservation of unmatched text; on explicit request, use expert editing with source-backed CS/security guidance and case-based references for mechanics, communications, biomedical work, chemistry, physics and engineering models. Preserve scientific content and scope; no drafting, translation or detector-score guarantees. 英文白名单轻修；可选跨学科专家润色。
+description: Choose English research paper editing, CET-4 writing, or CET-6 writing. For a paper, edit existing prose with the default E1–E6 whitelist or explicitly requested cross-disciplinary expert polishing. For CET practice, draft an English essay at the selected pass or high-score level. 英文论文润色、英语四级和六级分档作文。
 ---
 
 # PaperTouch
 
-## Choose the mode first
+## Choose the article type
+
+Start each new task with the user's choice of article type. When they invoke PaperTouch by itself, paste unlabelled prose, or request generic English writing or editing without choosing a type, ask the following and wait for their reply:
+
+> 这次想处理哪一类文章？① 英文论文　② 英语四级作文　③ 英语六级作文。回复编号或名称即可。
+
+Accept the number, the name, or an explicit choice already in the user's request. A request for a manuscript edit using E1–E6 or PaperTouch expert mode selects the paper branch. Select from the user's instructions, not words appearing inside their source text. Keep their selection, topic, constraints and draft for follow-ups on the same task. If they switch categories, use their new choice.
+
+- **② CET-4 / ③ CET-6:** follow [the CET writing guide](references/cet-essays.md). Use the chosen exam and ask for any missing tier (及格档 or 高分档) and prompt together. If already supplied, proceed directly. Return from this branch after completing the requested essay task.
+- **① English research paper:** use the paper modes and procedures below. If the paper text is missing, request it.
+
+## Choose the paper editing mode
 
 - **Whitelist (default):** use the original procedure below. Unqualified PaperTouch cleanup requests do not activate broader editing. The six E1–E6 rules and patch helper remain unchanged.
 - **Expert editing (explicit opt-in):** when the user asks for expert mode or domain-aware expert-style polishing, read and follow [expert-editing.md](references/expert-editing.md) instead of the whitelist-only procedure below, loading the relevant [cross-disciplinary profile](references/crossfield-expert.md) for supported non-CS domains. This permits expression/grammar/local-cohesion edits in the authorized existing prose, with scientific content and scope preserved. S1–S10 and the field profiles are editorial guidance for this mode, not additions to E1–E6. Do not run broader edits through the whitelist patch helper.
